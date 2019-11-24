@@ -1,0 +1,22 @@
+#left{
+width: 300px;
+border: solid 2px blueviolet;
+height: 300px;
+
+}
+#middle{
+    width: 300px;
+    border: solid 2px blueviolet;
+    height: 300px;
+
+}
+    #right{
+        width: 300px;
+        border: solid 2px blueviolet;
+        height: 300px;
+
+    }
+        #imageSection{
+text-align: center;
+margin-top: 200px;
+        }
