@@ -75,6 +75,8 @@ function render() {
   rightImage.setAttribute("src", rightSales.imagePath);
   rightImage.setAttribute("alt", rightSales.name);
   rightImage.setAttribute("title", rightSales.name);
+
+
 }
 render();
 function handleClick(e) {
@@ -86,11 +88,13 @@ function handleClick(e) {
           Product.all[x].voting++;
         }
       }
+      updateList();
       render();
     }
   }
   if (counter == 25) {
     showChartAndList();
+    updateList();
   }
 }
 
@@ -150,3 +154,17 @@ function showChartAndList() {
     options: chartOptions,
   });
 }
+
+function updateList(){
+  var listString = JSON.stringify(Product.all);
+  localStorage.setItem("productOrders",listString);
+}
+function getList(){
+  var listString = localStorage.getItem("productOrders");
+  if(listString){
+    Product.all = JSON.parse(listString);
+  }
+}
+
+
+getList();
