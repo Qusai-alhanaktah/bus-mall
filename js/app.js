@@ -42,13 +42,24 @@ function Product(path) {
 for (var i = 0; i < imagePaths .length; i++) {
   new Product(imagePaths [i]);
 }
-function render() {
-  var leftSales = Product.all[randomNumber(0, Product.all.length - 13)];
-  var middleSales = Product.all[randomNumber(Product.all.length - 12, Product.all.length - 6)];
-  var rightSales = Product.all[randomNumber(Product.all.length - 5, Product.all.length - 1)];
-  // while (leftSales == middleSales) {
+var previousIndexs = [];
+function getUniqueIndex() {
+  var index = randomNumber(0, Product.all.length - 1);
+  while (previousIndexs.includes(index)) {
+    index = randomNumber(0, Product.all.length - 1);
+  }
+  previousIndexs.push(index);
+  if (previousIndexs.length > 3) {
+    previousIndexs.shift();
+  }
+  return index;
+}
 
-  // }
+function render() {
+  var leftSales = Product.all[getUniqueIndex()];
+  var middleSales = Product.all[getUniqueIndex()];
+  var rightSales = Product.all[getUniqueIndex()];
+  
   leftSales.views++;
   middleSales.views++;
   rightSales.views++;
