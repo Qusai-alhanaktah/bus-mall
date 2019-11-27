@@ -18,7 +18,7 @@
 6. function
 7. construction
 
-## live link : [here](https://github.com/Qusai-alhanaktah/bus-mall)
+## live link : [here](https://qusai-alhanaktah.github.io/bus-mall/)
 
 ## license
 This project is licensed under the MIT License.
