@@ -139,7 +139,7 @@ function showChartAndList() {
   };
 
   var chartOptions = {
-    scales: {
+    scales: { 
       yAxes: [{
         ticks: {
           beginAtZero: true
