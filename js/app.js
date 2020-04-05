@@ -1,4 +1,5 @@
 'use strict'
+alert('click in photos for shopping you have 25 clicks only')
 var imagePaths  = [
   "bag.jpg",
   "banana.jpg",
